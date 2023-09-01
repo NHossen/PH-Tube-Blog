@@ -104,7 +104,7 @@ const renderData = (data) => {//Sorting for each item
   if (data.length === 0) {
     cardContainer.innerHTML = `
       <p class="text-right">No data found</p>
-       <img src="icon.png"/>
+      <img src="icon.png"/>
     `;
   } else {
     data.forEach((dataId) => {
@@ -152,9 +152,9 @@ const renderData = (data) => {//Sorting for each item
   }
 }
 
-const sortButton = document.getElementById('sort-btn');
-const sortBtn = sortButton.querySelector('button');
-sortBtn.addEventListener('click', sortDataByViews);//add button clicke to sort data
+// const sortButton = document.getElementById('sort-btn');
+// const sortBtn = sortButton.querySelector('button');
+// sortBtn.addEventListener('click', sortDataByViews);//add button clicke to sort data
 
 
 handelTabContainer();
