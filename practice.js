@@ -1,7 +1,5 @@
 
 let currentData = [];//Delare variable to keap value of function
-
-
 const handelTabContainer = async () => {
   const res = await fetch("https://openapi.programming-hero.com/api/videos/categories");
   const data = await res.json();
@@ -35,8 +33,8 @@ const handelPostContainer = async (getDataId) => {//get data by Id
   if (newData.length === 0) {//for emty data container
     cardContainer.innerHTML = `
     <div class="absolute">
-      <img class=" lg:ml-[500px] ml-[100px] lg:w-80 " src="icon.png"/>
-       <p class="lg:ml-[500px] ml-[25px] lg:mt-10 text-2xl text-center font-bold">Oops!! Sorry, There is no <br> content here</p>
+    <img  class=" lg:ml-[500px] ml-[100px] lg:w-80" src="icon.png" alt="alert">
+    <p class="lg:ml-[500px] ml-[25px] lg:mt-10 text-2xl text-center font-bold">Oops!! Sorry, There is no <br> content here</p>
     </div>
      
     `;
@@ -104,7 +102,7 @@ const renderData = (data) => {//Sorting for each item
   if (data.length === 0) {
     cardContainer.innerHTML = `
       <p class="text-right">No data found</p>
-       <img src="icon.png"/>
+      <img src="icon.png"/>
     `;
   } else {
     data.forEach((dataId) => {
@@ -152,9 +150,9 @@ const renderData = (data) => {//Sorting for each item
   }
 }
 
-const sortButton = document.getElementById('sort-btn');
-const sortBtn = sortButton.querySelector('button');
-sortBtn.addEventListener('click', sortDataByViews);//add button clicke to sort data
+// const sortButton = document.getElementById('sort-btn');
+// const sortBtn = sortButton.querySelector('button');
+// sortBtn.addEventListener('click', sortDataByViews);//add button clicke to sort data
 
 
 handelTabContainer();

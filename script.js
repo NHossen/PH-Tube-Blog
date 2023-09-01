@@ -33,8 +33,8 @@ const handelPostContainer = async (getDataId) => {//get data by Id
   if (newData.length === 0) {//for emty data container
     cardContainer.innerHTML = `
     <div class="absolute">
-      <img class=" lg:ml-[500px] ml-[100px] lg:w-80 " src="icon.png" alt="alert">
-       <p class="lg:ml-[500px] ml-[25px] lg:mt-10 text-2xl text-center font-bold">Oops!! Sorry, There is no <br> content here</p>
+    <img  class=" lg:ml-[500px] ml-[100px] lg:w-80" src="icon.png" alt="alert">
+    <p class="lg:ml-[500px] ml-[25px] lg:mt-10 text-2xl text-center font-bold">Oops!! Sorry, There is no <br> content here</p>
     </div>
      
     `;
