@@ -101,8 +101,10 @@ const renderData = (data) => {//Sorting for each item
 
   if (data.length === 0) {
     cardContainer.innerHTML = `
-      <p class="text-right">No data found</p>
-      <img src="icon.png"/>
+    <div class="absolute">
+    <img  class=" lg:ml-[500px] ml-[100px] lg:w-80" src="image/icon.png" alt="alert">
+    <p class="lg:ml-[500px] ml-[25px] lg:mt-10 text-2xl text-center font-bold">Oops!! Sorry, There is no <br> content here</p>
+    </div>
     `;
   } else {
     data.forEach((dataId) => {
