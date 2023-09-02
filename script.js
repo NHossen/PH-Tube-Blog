@@ -6,7 +6,7 @@ const handelTabContainer = async () => {
  //console.log(data);
   const getData = data.data;
   const tabContainer = document.getElementById('tab-container');
-  tabContainer.innerHTML = "";// Clear previous data.
+ tabContainer.innerHTML = "";// Clear previous data.
 
   
   getData.forEach((dataId) => {// create tab links.
@@ -47,7 +47,7 @@ const handelPostContainer = async (getDataId) => {//get data by Id
 
       let formattedPostedDate = "";//data posted time 
       if (hours > 0) {
-        formattedPostedDate = `${hours} hr${hours > 1 ? "s" : ""}`;
+        formattedPostedDate = `${hours} hrs${hours > 1 ? "" : ""}`;
         if (minutes > 0) {
           formattedPostedDate += ` ${minutes} min ago${minutes > 1 ? "" : ""}`;
         }
@@ -90,7 +90,7 @@ const handelPostContainer = async (getDataId) => {//get data by Id
 
 const sortDataByViews = () => { //Sort data by views 
   if (currentData.length > 0) {
-    currentData.sort((a, b) => parseInt(b.others.views, 10) - parseInt(a.others.views, 10));
+    currentData.sort((a, b) => parseInt(b.others.views) - parseInt(a.others.views));
     renderData(currentData);//get data from let varibale
   }
 }
