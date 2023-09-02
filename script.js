@@ -152,9 +152,9 @@ const renderData = (data) => {//Sorting for each item
   }
 }
 
-// const sortButton = document.getElementById('sort-btn');
-// const sortBtn = sortButton.querySelector('button');
-// sortBtn.addEventListener('click', sortDataByViews);//add button clicke to sort data
+const sortButton = document.getElementById('sort-btn');
+const sortBtn = sortButton.querySelector('button');
+sortBtn.addEventListener('click', sortDataByViews);//add button clicke to sort data
 
 
 handelTabContainer();
